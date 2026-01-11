@@ -1,0 +1,19 @@
+
+@hostname = localhost
+@port = 3001
+@host = http://{{hostname}}:{{port}}
+
+GET {{host}}/api/persons
+
+###
+
+DELETE {{host}}/api/persons/2
+
+###
+POST {{host}}/api/persons
+Content-type: application/json
+
+{
+    "name": "Post Test", 
+    "number": "01-2332"
+}
